@@ -1,0 +1,11 @@
+<h1>Poems matching search</h1>
+
+<% @poems.each do |poem| %>
+  <%= poem.title %><br>
+  <%= poem.author %><br>
+  <% if poem.tones != [] %>
+    <% poem.tones.each do |tone| %>
+      <%= tone[:tone_name] %><br>
+    <% end %><br>
+  <% end %>
+<% end %>
